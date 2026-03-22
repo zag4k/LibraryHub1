@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Library Management System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#home" class="logo">📚 LibraryHub</a>
+            <div class="search-box">
+                <i class="search-icon">🔍</i>
+                <input type="text" placeholder="Search books, authors..." id="searchInput">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#arrivals">New Arrivals</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Discover Your Next<br>Favorite Book</h1>
+            <p>Explore our curated collection of bestsellers, new releases, and timeless classics. Unlimited access to wisdom awaits.</p>
+            <button class="cta-button" onclick="scrollToFeatured()">Browse Collection</button>
+        </div>
+        <img src="https://i.pinimg.com/1200x/ab/b4/03/abb4034b8dadc06cb33a2398c0b5c557.jpg" alt="Reading" loading="lazy">
+    </section>
+
+    <!-- Featured Books -->
+    <section class="featured" id="featured">
+        <h2 class="section-title">Featured Collection</h2>
+        <div class="book-container" id="bookContainer">
+            <div class="book" data-title="The Seven Husbands of Evelyn Hugo" data-price="0.00" data-link="https://www.goodreads.com/book/show/32620332-the-seven-husbands-of-evelyn-hugo">
+                <img src="https://i.pinimg.com/1200x/03/32/64/0332640a2c719e6c69b796963411b165.jpg" alt="The Seven Husbands of Evelyn Hugo" loading="lazy">
+                <h4>The Seven Husbands of Evelyn Hugo</h4>
+                <button class="book-btn" onclick="redirectToStory(this)">Read Story</button>
+            </div>
+            <div class="book" data-title="The Song of Achilles" data-price="0.00" data-link="https://www.goodreads.com/book/show/13623848-the-song-of-achilles">
+                <img src="https://i.pinimg.com/736x/b6/92/1f/b6921f82255068d09e8e4f113c1ae3bc.jpg" alt="The Song of Achilles" loading="lazy">
+                <h4>The Song of Achilles</h4>
+                <button class="book-btn" onclick="redirectToStory(this)">Read Story</button>
+            </div>
+            <div class="book" data-title="The Housemaid" data-price="0.00" data-link="https://www.goodreads.com/book/show/60556912-the-housemaid">
+                <img src="https://i.pinimg.com/736x/8d/c1/e2/8dc1e2189a98cd0c9336c2c3b4722780.jpg" alt="The Housemaid" loading="lazy">
+                <h4>The Housemaid</h4>
+                <button class="book-btn" onclick="redirectToStory(this)">Read Story</button>
+            </div>
+            <div class="book" data-title="Milk and Honey" data-price="0.00" data-link="https://www.goodreads.com/book/show/23513349-milk-and-honey">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600&q=80" alt="Iron Flame">
+                <h4>Milk and Honey</h4>
+                <button class="book-btn" onclick="redirectToStory(this)">Read Story</button>
+            </div>
+            <div class="book" data-title="Fourth Wing" data-price="0.00" data-link="https://www.goodreads.com/book/show/61431922-fourth-wing">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=600&q=80" alt="Fourth Wing">
+                <h4>Fourth Wing</h4>
+                <button class="book-btn" onclick="redirectToStory(this)">Read Story</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+   <section class="featured" id="arrivals" style="background: linear-gradient(135deg, #AA594E 0%, #D39389 100%); padding: 4rem 2rem; margin: 4rem auto;">
+    <h2 class="section-title" style="color: #FFFFFF; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">🆕 New Arrivals</h2>
+    <div class="book-container">
+        <!-- YOUR NEW PINTEREST BOOK 1 -->
+        <div class="book" data-title="Programming Basics" data-price="0.00" style="border-color: #FFFFFF;" data-link="https://example.com/programming-basics">
+            <img src="https://i.pinimg.com/736x/e9/fd/e7/e9fde7c2266a238fbd6fc9fe6018de4f.jpg" alt="Romantic Escape" loading="lazy">
+            <h4>Programming Basics</h4>
+            <button class="book-btn" onclick="redirectToStory(this)">Read Story</button>
+        </div>
+        
+        <!-- YOUR NEW PINTEREST BOOK 2 -->
+        <div class="book" data-title="Java Programming" data-price="00.00" style="border-color: #FFFFFF;" data-link="https://example.com/java-programming">
+            <img src="https://i.pinimg.com/1200x/32/87/15/328715cbc6f3e2c820e20b19cb6ef5c2.jpg" alt="Mystery Thriller" loading="lazy">
+            <h4>Java Programming</h4>
+            <button class="book-btn" onclick="redirectToStory(this)">Read Story</button>
+        </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="blog" id="reviews">
+        <h2 class="section-title">⭐ Customer Reviews</h2>
+        <div class="blog-container">
+            <div class="blog-card" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                <h3>⭐⭐⭐⭐⭐</h3>
+                <p>"Best library website ever! Found my new favorite book."</p>
+                <small>- Sarah K.</small>
+            </div>
+            <div class="blog-card" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                <h3>⭐⭐⭐⭐⭐</h3>
+                <p>"Amazing collection and super easy to use!"</p>
+                <small>- Michael R.</small>
+            </div>
+            <div class="blog-card" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);">
+                <h3>⭐⭐⭐⭐⭐</h3>
+                <p>"Love the recommendations and fast checkout!"</p>
+                <small>- Emily T.</small>
+            </div>
+        </div>
+    </section>
+
+<!-- Team Section - Single Card -->
+<section class="blog" id="blogs">
+    <h2 class="section-title">ABOUT THIS PAGE</h2>
+    <div class="blog-container">
+        <div class="blog-card" style="grid-column: 1 / -1;">
+            <div style="text-align: center; font-size: 1.1rem; line-height: 1.8; color: #114847;">
+                <p>This website allows you to read conveniently and freely.
+                    enjoy your time here and we hope our website helps your reading taste
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Team Section - Single Card -->
+<section class="blog" id="blogs">
+    <h2 class="section-title">Made by Group 3</h2>
+    <div class="blog-container">
+        <div class="blog-card" style="grid-column: 1 / -1;">
+            <div style="text-align: center; font-size: 1.1rem; line-height: 1.8; color: #114847;">
+                <p>Alissa Adolfo</p>
+                <p>Jerikko Urquiaga Reyes</p>
+                <p>Lebron James Borja</p>
+                <p>Mardi Soleil Blando</p>
+                <p>Rainer Dylan Dimabayao</p>
+                <p>Rohan Ruiz</p>
+                <p>Sean Tumaliuan</p>
+                <p>Serena Blair Aclan</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Team Section - Single Card -->
+<section class="blog" id="blogs">
+    <h2 class="section-title">TEACHERS</h2>
+    <div class="blog-container">
+        <div class="blog-card" style="grid-column: 1 / -1;">
+            <div style="text-align: center; font-size: 1.1rem; line-height: 1.8; color: #114847;">
+                <p>Comm Prog 4: 
+Chloe Anne Cordial</p>
+                <p>Comm Prog 3: 
+John Keneth Beltran</p>
+                <p>EMTECH: 
+Eli Mae Ortiz</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 LibraryHub - Your Gateway to Knowledge ✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
